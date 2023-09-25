@@ -66,7 +66,7 @@ while 5 > 4.99999:
     link = input(color.BPurple+"[?] Enter download link >> "+color.BGreen)
     Clear();Print()
     file_name = urlparse(link)
-    file_name = file_name.path.rsplit('/', 1)[-1]
+    file_name = file_name.query.rsplit('/')[2]
     Download(file_name, link)
     Clear();Print()
     print(color.BGreen+f"[FINISHED]>> {file_name}\t✓")
